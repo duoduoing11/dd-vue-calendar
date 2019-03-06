@@ -3,10 +3,13 @@ node_modules/
 src/
 public/
 packages/
+dist/
 
 # 忽略指定文件
-vue.config.js
-babel.config.js
 .eslintrc.js
 .gitignore
+.npmignore
+babel.config.js
 package-lock.json
+package.json
+vue.config.js

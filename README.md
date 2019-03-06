@@ -41,3 +41,7 @@ import "./ddVueCalendar目录/ddVueCalendar.js";
 
 ## Calendar show
 ![gif1](./img/gif1.gif)
+
+## git、npm地址
+[git](https://github.com/duoduoing11/dd-vue-calendar)
+[npm](https://www.npmjs.com/package/dd-vue-calendar)

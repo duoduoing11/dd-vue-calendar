@@ -1,7 +1,7 @@
 //  vue.config.js
 const path = require('path')
 module.exports = {
-    baseUrl: './',
+    publicPath: './',
     pages: {
         index: {
             entry: 'src/main.js',
