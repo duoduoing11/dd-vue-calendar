@@ -1,12 +1,7 @@
 //  vue.config.js
 const path = require('path')
 module.exports = {
-    outputDir: '../../../cvue/AutoLayoutTool-WebPC',
-    baseUrl: process.env.VUE_APP_routerBase,
-    productionSourceMap: false,
-    transpileDependencies: [
-        '@cttq',
-    ],
+    baseUrl: './',
     pages: {
         index: {
             entry: 'src/main.js',
