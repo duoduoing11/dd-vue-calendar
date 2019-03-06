@@ -40,7 +40,8 @@ import "./ddVueCalendar目录/ddVueCalendar.js";
 	* displayValues：转换后的时间，年-月-日
 
 ## Calendar show
-![gif1](./img/gif1.gif)
+* [预览地址](https://duoduoing11.github.io/dd-vue-calendar/dist/index.html)
+* ![gif1](./img/gif1.gif)
 
 ## git  npm 地址
 * [git](https://github.com/duoduoing11/dd-vue-calendar)
