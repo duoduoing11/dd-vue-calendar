@@ -1,64 +1,60 @@
 {
-  "name": "dd-vue-calendar",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-plugin-eslint": "^3.1.1",
-    "@vue/cli-service": "^3.1.1",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "lint-staged": "^8.1.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.21"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "dd-vue-calendar",
+    "version": "0.1.2",
+    "description": "一个干净的轻量级移动端日历插件，用于在Vue.js中显示带农历的日历。包括高亮显示的日期区域、节假日、今天、单选日期、多选日期段等。",
+    "private": false,
+    "main": "./lib/calendar.common.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "lib": "vue-cli-service build --target lib --name calendar --dest lib packages/index.js"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
+    "dependencies": {
+        "eslint-plugin-html": "^5.0.3",
+        "vue": "^2.5.17",
+        "vue-router": "^3.0.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.1.1",
+        "@vue/cli-plugin-eslint": "^3.1.1",
+        "@vue/cli-service": "^3.1.1",
+        "babel-eslint": "^10.0.1",
+        "chalk": "^2.4.2",
+        "eslint": "^5.12.1",
+        "eslint-plugin-vue": "^5.0.0-0",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
+        "vue-cli-plugin-element": "^1.0.0",
+        "vue-template-compiler": "^2.5.17"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {
+                "browsers": [
+                    "Android >= 4.0",
+                    "iOS >= 7"
+                ]
+            }
+        }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
     ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
+    "keywords": [
+        "calendar",
+        "Calendar",
+        "DD",
+        "dd",
+        "vue",
+        "vue.js",
+        "DUODUO",
+        "duoduo",
+        "cttq",
+        "CTTQ"
     ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+    "author": "duoduoing11",
+    "license": "ISC"
 }

@@ -1,0 +1,151 @@
+/*------------------------------------------------------------
+// Copyright (C) 2016 正大天晴药业集团股份有限公司  版权所有。
+// 文件名：boxModel.css
+// 文件功能描述：cttq公共css文件
+// 创 建 人：贾韦韦
+// 创建日期：2016/11/28
+// 修 改 人：
+// 修改日期：
+// 修改描述：
+//-----------------------------------------------------------*/
+/*盒子模型*/
+.bm {
+	display: flex !important;
+	position: relative
+}
+
+/*盒子模型内元素 - 是否垂直排列 - 使用ver后盒子模型内元素垂直、水平排序对调*/
+.bm-ver {
+	flex-direction: column;
+}	
+
+/*盒子模型内元素 - 垂直方向排序 - 垂直居中*/
+.bm-ac {
+	align-items: center;
+}
+
+/*盒子模型内元素 - 垂直方向排序 - 位于底边*/
+.bm-ae {
+	align-items: flex-end;
+}
+
+/*盒子模型内元素 - 水平方向排序 - 水平居中*/
+.bm-pc {
+	justify-content: center;
+}
+
+/*盒子模型内元素 - 水平方向排序 - 位于末尾*/
+.bm-pe {
+	justify-content: flex-end;
+}
+
+/*盒子模型内元素 - 水平方向排序 - 两端对齐*/
+.bm-pj {
+	justify-content: space-between;
+}
+
+/*盒子模型内元素 - 空间大小分配比例*/
+.bm-f1 {
+	position: relative;
+	flex-grow: 1;
+	box-flex: 1
+}
+
+.bm-f2 {
+	position: relative;
+	flex-grow: 2;
+	box-flex: 2
+}
+
+.bm-f3 {
+	position: relative;
+	flex-grow: 3;
+	box-flex: 3
+}
+
+.bm-f4 {
+	position: relative;
+	flex-grow: 4;
+	box-flex: 4
+}
+
+/*盒子模型内元素 - 背景图片类别*/
+.bm-img {
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.bm-img1 {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.bm-img2 {
+	background-repeat: repeat-x;
+	background-size: auto 100%
+}
+
+.bm-img3 {
+	background-repeat: repeat-y;
+	background-size: 100% auto
+}
+
+.bm-img4 {
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.bm-img5 {
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.bm-img6 {
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.bm-img7 {
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+/*盒子模型内元素 - 水平排列方向*/
+.bm-rev {
+	-webkit-box-direction: reverse;
+	box-direction: reverse
+}
+
+.um-vp {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: none
+}
+
+.um-vp .up {
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	position: absolute;
+	border: 0
+}
+
+/*bm == boxmodel*/
+.hide {
+	display: none !important;
+}
