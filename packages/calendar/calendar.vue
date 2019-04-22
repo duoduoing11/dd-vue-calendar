@@ -62,7 +62,7 @@
 								     :day="dayCols.dayNumber"
 								     :date="dayCols.dayYear+'-'+dayCols.dayMonth+'-'+dayCols.dayNumber"
 								     class="picker-calendar-day bm bm-ac bm-pc"
-								     :class="dayCols.addClass+' '+dayCols.selectedClass"
+								     :class="dayCols.addClass+' '+dayCols.selectedClass+' '+dayCols.dayTextObj.bLastTag.className"
 								     :key="dayKey"
 								     v-for="(dayCols, dayKey) in weekRows"
 								     @click="handleDayClick(weekKey, dayCols, $event)">
@@ -81,7 +81,7 @@
 										   :class="dayCols.LunarCalendar.class">{{dayCols.dayTextObj.todayTag.text}}</b>
 										<b :ref="monthKey+dayCols.dayYear+'-'+dayCols.dayMonth+'-'+dayCols.dayNumber+'-b'"
 										   class="bm bm-ac bm-pc lunar tag"
-										   :class="dayCols.dayTextObj.bLastTag.className+''+dayCols.LunarCalendar.class"
+										   :class="dayCols.dayTextObj.bLastTag.className+' '+dayCols.LunarCalendar.class"
 										   :text="dayCols.LunarCalendar.text">{{dayCols.dayTextObj.bLastTag.text}}</b>
 									</span>
 								</div>
@@ -99,6 +99,7 @@
 		     :class="toastClass">
 			{{toastText}}
 		</div>
+		<slot></slot>
 	</div>
 </template>
 <script>

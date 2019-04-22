@@ -18,9 +18,9 @@ export default {
 .calendar{
 	width 100%
 	.inputDate{
-		height 3rem
+		height 45px
 		border 1px solid #333333
-		margin 1rem
+		margin 20px
 	}
 }
 </style>

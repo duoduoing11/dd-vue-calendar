@@ -1,6 +1,6 @@
 {
     "name": "dd-vue-calendar",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "一个干净的轻量级移动端日历插件，用于在Vue.js中显示带农历的日历。包括高亮显示的日期区域、节假日、今天、单选日期、多选日期段等。",
     "private": false,
     "main": "./lib/calendar.common.js",

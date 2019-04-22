@@ -288,7 +288,7 @@ export default {
             const monthDir = ['prev', 'current', 'next']
             if (p.selectedRefTag && p.selectedRefTag.length > 0) {
                 p.selectedRefTag.forEach(function (sArr, sIndex) {
-                    const dayColsTag = sArr.tag
+					const dayColsTag = sArr.tag
                     monthDir.forEach(function (dir, dIndex) {
                         monthsData[dir].weekRows.forEach(function (rowArr, row) {
                             if (rowArr[dayColsTag]) {
@@ -301,7 +301,8 @@ export default {
                     })
                 })
             }
-            var i, inputValue;
+			var i, inputValue;
+			const dayCols = p.handleTouchDayCols;
             if (p.params.multiple) {
                 if (p.rangeValue.length == 2 && p.rangeValue[0] == p.rangeValue[1]) {
                     var valueDate = new Date(p.rangeValue[1]);
@@ -317,11 +318,10 @@ export default {
                 } else {
                     if (p.rangeValue.length == 1) {
                         p.selectedRefTag = []
-                        const dayCols = p.handleTouchDayCols;
-                        const dayColsTag = '' + dayCols.dayYear + '-' + dayCols.dayMonth + '-' + dayCols.dayNumber + ''
+						const dayColsTag = '' + dayCols.dayYear + '-' + dayCols.dayMonth + '-' + dayCols.dayNumber + ''
                         monthDir.forEach(function (dir, dIndex) {
                             monthsData[dir].weekRows.forEach(function (rowArr, row) {
-                                if (rowArr[dayColsTag]) {
+                                if (dayCols.dayDir == dir && rowArr[dayColsTag]) {
                                     p.selectedRefTag.push({
                                         dir: dir,
                                         weekKey: row,
@@ -345,7 +345,7 @@ export default {
                         p.selectedRefTag = []
                         p.rangeValue.forEach(function (rVal, rIndex) {
                             rVal = new Date(rVal)
-                            const dayTag = rVal.getFullYear() + '-' + Number(rVal.getMonth() + 1) + '-' + rVal.getDate()
+							const dayTag = rVal.getFullYear() + '-' + Number(rVal.getMonth() + 1) + '-' + rVal.getDate()
                             monthDir.forEach(function (dir, dIndex) {
                                 monthsData[dir].weekRows.forEach(function (rowArr, row) {
                                     if (rowArr[dayTag]) {
@@ -377,7 +377,6 @@ export default {
                     }
                 }
             } else {
-                const dayCols = p.handleTouchDayCols;
                 dayCols.selectedClass = 'picker-calendar-day-selected picker-calendar-day-selectedBig'
                 p.selectedRefTag = [{
                     dir: dayCols.dayDir,
@@ -405,7 +404,9 @@ export default {
                 } else {
                     p.monthsVM.calendarOnChange(p, p.value, p.value.map(p.formatDate));
                 }
-            }
+			}
+			if (p.handleTouchDayCols.dayDir == 'prev') p.monthsVM.prevMonth();
+            if (p.handleTouchDayCols.dayDir == 'next') p.monthsVM.nextMonth();
         };
         // Calendar Methods
         p.daysInMonth = function (date) {
@@ -775,8 +776,6 @@ export default {
             p.handleTouchDayCols = dayCols
             if (dayCols.selectedTag && !p.params.multiple) return;
             if (dayCols.Disabled) return;
-            if (dayCols.dayDir == 'prev') p.monthsVM.prevMonth();
-            if (dayCols.dayDir == 'next') p.monthsVM.nextMonth();
             p.addValue(new Date(dayCols.dayYear, dayCols.dayMonth - 1, dayCols.dayNumber).getTime());
             if (p.params.btnShow == false && p.params.multiple == false) {
                 if (p.params.closeOnSelect) p.monthsVM.calendarClose();
